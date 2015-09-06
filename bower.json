@@ -1,0 +1,20 @@
+{
+  "name": "Hapi-Angular-MVP",
+  "version": "0.0.1",
+  "authors": [
+    "David Cahill"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#~1.4.5",
+    "angular-bootstrap": "0.13.4",
+    "bootstrap": "3.3.5"
+  }
+}

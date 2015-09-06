@@ -1,0 +1,18 @@
+<!doctype html>
+<html ng-app="hapiAngularSenecaMVP" ng-strict-di>
+  <head> 
+    <title>{+title /}</title>
+    <link rel="stylesheet" href="/components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/app.css">
+  </head>
+  <body>
+    {+body /}
+
+    <script src="/components/angular/angular.min.js"></script>
+    <script src="/components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="/components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+    <script src="/seneca/init.js"></script>
+    <script src="/js/app.js"></script>
+  </body>
+</html>
