@@ -20,6 +20,7 @@
     "grunt": "0.4.5",
     "grunt-contrib-jshint": "0.10.0",
     "grunt-githooks": "0.3.1",
+    "grunt-lab": "^2.1.4",
     "lab": "5.15.1",
     "mocha": "^2.3.3",
     "seneca": "0.7.1"

@@ -439,7 +439,7 @@
               <td class="test-title">Item Get item id
                   
               </td>
-              <td class="test-duration">9</td>
+              <td class="test-duration">4</td>
           </tr>
           </tbody>
       </table>
@@ -451,24 +451,24 @@
             <li><a href="#tests">Test Report</a></li>
             <li><a href="#coverage">Coverage Report</a></li>
             <li>
-                <span class="cov high">100</span>
+                <span class="cov high">92.86</span>
                 <a href="#services/item.js"><span class="dirname">services/</span><span class="basename">item.js</span></a>
             </li>
         </div>
         <div class="stats high">
-            <div class="percentage">100%</div>
-            <div class="sloc">8</div>
-            <div class="hits">8</div>
-            <div class="misses">0</div>
+            <div class="percentage">92.86%</div>
+            <div class="sloc">14</div>
+            <div class="hits">13</div>
+            <div class="misses">1</div>
         </div>
         <div id="files">
             <div class="file">
                 <h2 id="services/item.js">services/item.js</h2>
                 <div class="stats high">
-                    <div class="percentage">100%</div>
-                    <div class="sloc">8</div>
-                    <div class="hits">8</div>
-                    <div class="misses">0</div>
+                    <div class="percentage">92.86%</div>
+                    <div class="sloc">14</div>
+                    <div class="hits">13</div>
+                    <div class="misses">1</div>
                 </div>
                 <table>
                     <thead>
@@ -497,27 +497,27 @@
                         <tr class="hit">
                             <td class="line">4</td>
                             <td class="hits">1</td>
-                            <td class="source">  var seneca = this;  </td>
+                            <td class="source">  var seneca = this;</td>
                         </tr>
                         <tr class="hit">
                             <td class="line">5</td>
                             <td class="hits">1</td>
-                            <td class="source">  seneca.add({role: &#x27;item&#x27;, cmd: &#x27;get-id&#x27;}, function (args, done) {</td>
+                            <td class="source">  var plugin = &#x27;item&#x27;;</td>
                         </tr>
                         <tr class="hit">
                             <td class="line">6</td>
-                            <td class="hits">1</td>
-                            <td class="source">    return done(null, {id: 1234});</td>
+                            <td class="hits"></td>
+                            <td class="source"></td>
                         </tr>
                         <tr class="hit">
                             <td class="line">7</td>
-                            <td class="hits"></td>
-                            <td class="source">  });</td>
+                            <td class="hits">1</td>
+                            <td class="source">  seneca.add({role: plugin, cmd: &#x27;get_id&#x27;}, cmd_get_id);</td>
                         </tr>
                         <tr class="hit">
                             <td class="line">8</td>
-                            <td class="hits"></td>
-                            <td class="source">}</td>
+                            <td class="hits">1</td>
+                            <td class="source">  seneca.add({role: plugin, cmd: &#x27;test_action&#x27;}, cmd_test_action);</td>
                         </tr>
                         <tr class="hit">
                             <td class="line">9</td>
@@ -527,10 +527,55 @@
                         <tr class="hit">
                             <td class="line">10</td>
                             <td class="hits">1</td>
-                            <td class="source">module.exports = itemService;</td>
+                            <td class="source">  function cmd_get_id (args, done) {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line">11</td>
+                            <td class="hits">1</td>
+                            <td class="source">    return done(null, {id: 1234});</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line">12</td>
+                            <td class="hits"></td>
+                            <td class="source">  }</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line">13</td>
+                            <td class="hits"></td>
+                            <td class="source"></td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line">14</td>
+                            <td class="hits">1</td>
+                            <td class="source">  function cmd_test_action (args, done) {</td>
+                        </tr>
+                            <tr class="miss">
+                                <td class="line">15</td>
+                                <td class="hits"></td>
+                                <td class="source">  	return done();</td>
+                            </tr>
+                        <tr class="hit">
+                            <td class="line">16</td>
+                            <td class="hits"></td>
+                            <td class="source">  }</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line">17</td>
+                            <td class="hits"></td>
+                            <td class="source">}</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line">18</td>
+                            <td class="hits"></td>
+                            <td class="source"></td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line">19</td>
+                            <td class="hits">1</td>
+                            <td class="source">module.exports = itemService;</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line">20</td>
                             <td class="hits"></td>
                             <td class="source"></td>
                         </tr>

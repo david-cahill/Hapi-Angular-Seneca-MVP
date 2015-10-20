@@ -4,24 +4,24 @@
       {
         "title": "Get item id",
         "err": false,
-        "duration": 9
+        "duration": 4
       }
     ]
   },
   "duration": 10,
   "leaks": [],
   "coverage": {
-    "sloc": 8,
-    "hits": 8,
-    "misses": 0,
-    "percent": 100,
+    "sloc": 14,
+    "hits": 13,
+    "misses": 1,
+    "percent": 92.85714285714286,
     "files": [
       {
         "filename": "services/item.js",
-        "percent": "100",
-        "hits": 8,
-        "misses": 0,
-        "sloc": 8,
+        "percent": "92.86",
+        "hits": 13,
+        "misses": 1,
+        "sloc": 14,
         "source": {
           "1": {
             "source": "'use strict';",
@@ -37,26 +37,27 @@
             "miss": false
           },
           "4": {
-            "source": "  var seneca = this;  ",
+            "source": "  var seneca = this;",
             "hits": 1,
             "miss": false
           },
           "5": {
-            "source": "  seneca.add({role: 'item', cmd: 'get-id'}, function (args, done) {",
+            "source": "  var plugin = 'item';",
             "hits": 1,
             "miss": false
           },
           "6": {
-            "source": "    return done(null, {id: 1234});",
-            "hits": 1,
+            "source": "",
             "miss": false
           },
           "7": {
-            "source": "  });",
+            "source": "  seneca.add({role: plugin, cmd: 'get_id'}, cmd_get_id);",
+            "hits": 1,
             "miss": false
           },
           "8": {
-            "source": "}",
+            "source": "  seneca.add({role: plugin, cmd: 'test_action'}, cmd_test_action);",
+            "hits": 1,
             "miss": false
           },
           "9": {
@@ -64,11 +65,51 @@
             "miss": false
           },
           "10": {
-            "source": "module.exports = itemService;",
+            "source": "  function cmd_get_id (args, done) {",
             "hits": 1,
             "miss": false
           },
           "11": {
+            "source": "    return done(null, {id: 1234});",
+            "hits": 1,
+            "miss": false
+          },
+          "12": {
+            "source": "  }",
+            "miss": false
+          },
+          "13": {
+            "source": "",
+            "miss": false
+          },
+          "14": {
+            "source": "  function cmd_test_action (args, done) {",
+            "hits": 1,
+            "miss": false
+          },
+          "15": {
+            "source": "  \treturn done();",
+            "hits": 0,
+            "miss": true
+          },
+          "16": {
+            "source": "  }",
+            "miss": false
+          },
+          "17": {
+            "source": "}",
+            "miss": false
+          },
+          "18": {
+            "source": "",
+            "miss": false
+          },
+          "19": {
+            "source": "module.exports = itemService;",
+            "hits": 1,
+            "miss": false
+          },
+          "20": {
             "source": "",
             "miss": false
           }

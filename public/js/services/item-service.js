@@ -7,7 +7,7 @@
     }
     return {
       getItemID: function (success, fail) {
-        serviceApi.get('item/get-id', success, fail || failBackup);
+        serviceApi.get('item/get_id', success, fail || failBackup);
       }
     };
   }

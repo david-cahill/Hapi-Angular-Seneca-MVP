@@ -12,15 +12,21 @@ module.exports = function(grunt) {
       },
       all: ['controllers/**/*.js', 'public/js/**/*.js', 'services/**/*.js', 'lib/**/*.js', 'test/**/*.js']
     },
+    lab: {
+      color       : true,
+      coverage    : true,
+      minCoverage : 100
+    },
     githooks: {
       all: {
-        'pre-commit': 'jshint',
+        'pre-commit': 'jshint lab',
       }
     }
   });
-  // Load the plugin that provides the "jshint" task.
+
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-githooks');
+  grunt.loadNpmTasks("grunt-lab");
 
   // Default task(s).
   grunt.registerTask('default', ['jshint']);
