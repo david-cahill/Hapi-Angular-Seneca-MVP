@@ -28,7 +28,8 @@ module.exports.register = function (server, options, next) {
       directory: {
         path: path.join(__dirname, '../public/components')
       }
-    }
+    },
+    config: { cache: { expiresIn: 60 * 1000 } }
   });
 
   server.route({
@@ -38,7 +39,8 @@ module.exports.register = function (server, options, next) {
       directory: {
         path: path.join(__dirname, '../public/css')
       }
-    }
+    },
+    config: { cache: { expiresIn: 60 * 1000 } }
   });
 
   server.route({
@@ -48,7 +50,8 @@ module.exports.register = function (server, options, next) {
       directory: {
         path: path.join(__dirname, '../public/img')
       }
-    }
+    },
+    config: { cache: { expiresIn: 60 * 1000 } }
   });
 
   server.route({
@@ -58,7 +61,8 @@ module.exports.register = function (server, options, next) {
       directory: {
         path: path.join(__dirname, '../public/js')
       }
-    }
+    },
+    config: { cache: { expiresIn: 60 * 1000 } }
   });
 
   server.route({
@@ -68,7 +72,8 @@ module.exports.register = function (server, options, next) {
       file: {
         path: path.join(__dirname, '../public/favicon.ico')
       }
-    }
+    },
+    config: { cache: { expiresIn: 60 * 1000 } }
   });
 
 };

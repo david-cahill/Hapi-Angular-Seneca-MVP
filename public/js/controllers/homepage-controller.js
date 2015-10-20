@@ -7,7 +7,7 @@
       $scope.item.id = result.id;
     });
   }
-
+  
   angular.module('hapiAngularSenecaMVP')
     .controller('homepage-controller', ['$scope', 'itemService', homepageController]);
 

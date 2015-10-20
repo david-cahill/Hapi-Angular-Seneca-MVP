@@ -8,7 +8,7 @@
       }
     ]
   },
-  "duration": 10,
+  "duration": 9,
   "leaks": [],
   "coverage": {
     "sloc": 8,

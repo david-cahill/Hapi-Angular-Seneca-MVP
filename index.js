@@ -16,7 +16,9 @@ function reportError (pluginName) {
   };
 }
 
-server.connection({ port: port });
+server.connection({ 
+  port: port
+});
 
 server.views({
   engines: { dust: require('hapi-dust') },
