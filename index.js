@@ -16,7 +16,9 @@ function reportError (pluginName) {
   };
 }
 
-server.connection({ port: port });
+server.connection({ 
+  port: port
+});
 
 server.views({
   engines: { dust: require('hapi-dust') },
@@ -26,27 +28,18 @@ server.views({
 
 server.register({ register: require('./controllers') }, reportError('controllers'));
 
+var itemApi = require('./lib/item');
+
+server.register(itemApi, function (err) {
+  if (err) console.log(err);
+});
+
 server.register({ register: Chairo, options: {} }, function (err) {
   reportError('Chairo')(err);
 
-  var seneca = server.seneca;
-
-  server.register({
-    register: require('hapi-seneca'),
-    options: {
-      seneca : seneca,
-      cors: true,
-      session: {
-        secret: 'hapi-angular-seneca-mvp',
-        name: 'HAPI.ANGULAR.SENECA-MVP',
-        saveUninitialized: true,
-        resave: true
-      }
-    }
-  }, function (err) {
-    reportError('hapi-seneca')(err);
-    server.start(function() {
-      console.log('Listening on http://localhost:' + port);
-    });
+  var itemService = require('./services/item').bind(server.seneca)();
+  
+  server.start(function() {
+    console.log('Listening on http://localhost:' + port);
   });
 });

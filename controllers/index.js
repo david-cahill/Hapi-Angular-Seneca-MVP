@@ -6,15 +6,20 @@ var requireindex = require('requireindex');
 var controllers = requireindex(__dirname);
 
 module.exports.register = function (server, options, next) {
+  // Serve public files
+  _.each(controllers, function (controller) {
+    server.route(controller);
+  });
+
   server.route({
     method: 'GET',
     path: '/',
     handler: function (request, reply) {
       reply.view('index', request.locals);
-    }
+    },
+    config: { cache: { expiresIn: 60 * 1000 } }
   });
 
-  // Serve public files
   server.route({
     method: 'GET',
     path: '/components/{filename*}',
@@ -22,7 +27,8 @@ module.exports.register = function (server, options, next) {
       directory: {
         path: path.join(__dirname, '../public/components')
       }
-    }
+    },
+    config: { cache: { expiresIn: 60 * 1000 } }
   });
 
   server.route({
@@ -32,7 +38,8 @@ module.exports.register = function (server, options, next) {
       directory: {
         path: path.join(__dirname, '../public/css')
       }
-    }
+    },
+    config: { cache: { expiresIn: 60 * 1000 } }
   });
 
   server.route({
@@ -42,7 +49,8 @@ module.exports.register = function (server, options, next) {
       directory: {
         path: path.join(__dirname, '../public/img')
       }
-    }
+    },
+    config: { cache: { expiresIn: 60 * 1000 } }
   });
 
   server.route({
@@ -52,7 +60,8 @@ module.exports.register = function (server, options, next) {
       directory: {
         path: path.join(__dirname, '../public/js')
       }
-    }
+    },
+    config: { cache: { expiresIn: 60 * 1000 } }
   });
 
   server.route({
@@ -62,7 +71,8 @@ module.exports.register = function (server, options, next) {
       file: {
         path: path.join(__dirname, '../public/favicon.ico')
       }
-    }
+    },
+    config: { cache: { expiresIn: 60 * 1000 } }
   });
 
 };
