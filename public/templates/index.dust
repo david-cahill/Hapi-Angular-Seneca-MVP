@@ -1,7 +1,5 @@
 {>"layouts/home" /}
 {<body}
   {>"common/top-nav-bar" /}
-  <div class="container">
-    <h2>Hello World!</h2>
-  </div>
+  <div ui-view></div>
 {/body}

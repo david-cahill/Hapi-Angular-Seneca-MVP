@@ -1,0 +1,85 @@
+{
+  "tests": {
+    "Item": [
+      {
+        "title": "Get item id",
+        "err": false,
+        "duration": 9
+      }
+    ]
+  },
+  "duration": 10,
+  "leaks": [],
+  "coverage": {
+    "sloc": 8,
+    "hits": 8,
+    "misses": 0,
+    "percent": 100,
+    "files": [
+      {
+        "filename": "services/item.js",
+        "percent": "100",
+        "hits": 8,
+        "misses": 0,
+        "sloc": 8,
+        "source": {
+          "1": {
+            "source": "'use strict'",
+            "miss": false
+          },
+          "2": {
+            "source": "",
+            "miss": false
+          },
+          "3": {
+            "source": "function itemService () {",
+            "hits": 1,
+            "miss": false
+          },
+          "4": {
+            "source": "  var seneca = this;  ",
+            "hits": 1,
+            "miss": false
+          },
+          "5": {
+            "source": "  seneca.add({role: 'item', cmd: 'get-id'}, function (args, done) {",
+            "hits": 1,
+            "miss": false
+          },
+          "6": {
+            "source": "    return done(null, {id: 1234});",
+            "hits": 1,
+            "miss": false
+          },
+          "7": {
+            "source": "  });",
+            "miss": false
+          },
+          "8": {
+            "source": "};",
+            "miss": false
+          },
+          "9": {
+            "source": "",
+            "miss": false
+          },
+          "10": {
+            "source": "module.exports = itemService;",
+            "hits": 1,
+            "miss": false
+          },
+          "11": {
+            "source": "",
+            "miss": false
+          }
+        },
+        "segments": [
+          "services"
+        ],
+        "basename": "item.js",
+        "percentClass": "high",
+        "dirname": "services/"
+      }
+    ]
+  }
+}

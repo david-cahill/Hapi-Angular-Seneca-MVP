@@ -11,8 +11,11 @@
     <script src="/components/angular/angular.min.js"></script>
     <script src="/components/angular-bootstrap/ui-bootstrap.min.js"></script>
     <script src="/components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="/components/angular-ui-router/release/angular-ui-router.min.js"></script>
 
-    <script src="/seneca/init.js"></script>
-    <script src="/js/app.js"></script>
+    <script src="/js/modules.js"></script>
+    <!-- Controllers -->
+    <script src="/js/controllers/homepage-controller.js"></script>
+    <script src="/js/init-app.js"></script>
   </body>
 </html>

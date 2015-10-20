@@ -5,7 +5,14 @@ var _ = require('lodash');
 var requireindex = require('requireindex');
 var controllers = requireindex(__dirname);
 
+delete controllers.api;
+
 module.exports.register = function (server, options, next) {
+  // Serve public files
+  _.each(controllers, function (controller) {
+    server.route(controller);
+  });
+
   server.route({
     method: 'GET',
     path: '/',
@@ -14,7 +21,6 @@ module.exports.register = function (server, options, next) {
     }
   });
 
-  // Serve public files
   server.route({
     method: 'GET',
     path: '/components/{filename*}',
