@@ -5,8 +5,6 @@ var _ = require('lodash');
 var requireindex = require('requireindex');
 var controllers = requireindex(__dirname);
 
-delete controllers.api;
-
 module.exports.register = function (server, options, next) {
   // Serve public files
   _.each(controllers, function (controller) {
@@ -18,7 +16,8 @@ module.exports.register = function (server, options, next) {
     path: '/',
     handler: function (request, reply) {
       reply.view('index', request.locals);
-    }
+    },
+    config: { cache: { expiresIn: 60 * 1000 } }
   });
 
   server.route({

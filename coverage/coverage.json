@@ -8,7 +8,7 @@
       }
     ]
   },
-  "duration": 9,
+  "duration": 10,
   "leaks": [],
   "coverage": {
     "sloc": 8,
@@ -24,7 +24,7 @@
         "sloc": 8,
         "source": {
           "1": {
-            "source": "'use strict'",
+            "source": "'use strict';",
             "miss": false
           },
           "2": {
@@ -56,7 +56,7 @@
             "miss": false
           },
           "8": {
-            "source": "};",
+            "source": "}",
             "miss": false
           },
           "9": {
