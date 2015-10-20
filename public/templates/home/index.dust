@@ -1,3 +1,4 @@
 <div class="container">
   <h2>Hello World!</h2>
+  <p>Item ID (retrieved via API): {{ item.id }} </p>
 </div>

@@ -14,6 +14,9 @@
     <script src="/components/angular-ui-router/release/angular-ui-router.min.js"></script>
 
     <script src="/js/modules.js"></script>
+    <!-- Services -->
+    <script src="/js/services/service-api.js"></script>
+    <script src="/js/services/item-service.js"></script>
     <!-- Controllers -->
     <script src="/js/controllers/homepage-controller.js"></script>
     <script src="/js/init-app.js"></script>
